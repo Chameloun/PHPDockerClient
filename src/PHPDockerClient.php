@@ -1,6 +1,6 @@
 <?php
 
-namespace LocuTeam\PHPDocker;
+namespace LocuTeam\PHPDockerClient;
 
 
 /**
@@ -26,7 +26,7 @@ enum HTTP_METHOD : string {
  * 
  */
 
-final class PHPDocker {
+final class PHPDockerClient {
 
     # UNIX socket
 
