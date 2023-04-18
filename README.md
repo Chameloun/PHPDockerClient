@@ -4,5 +4,5 @@ PHP client for Docker API
 ## Installation
 
 `
-$ composer require locuteam/php-docker-client
+$ composer require locuteam/php-docker-client:dev-main
 `
