@@ -1,0 +1,20 @@
+{
+    "name": "locuteam/docker-php-client",
+    "description": "PHP client for Docker API",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LocuTeam\\DockerPhpClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matěj Soukup",
+            "email": "matej@locuboard.cz"
+        }
+    ]
+}
