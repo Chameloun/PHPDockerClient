@@ -1,3 +1,4 @@
+[![PHP Composer](https://github.com/Chameloun/PHPDockerClient/actions/workflows/php.yml/badge.svg)](https://github.com/Chameloun/PHPDockerClient/actions/workflows/php.yml)
 # PHPDockerClient
 PHP client for Docker API
 
