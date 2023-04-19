@@ -60,7 +60,7 @@ final class PHPDockerClient {
      * @param int $port
      * 
      */
-    public function __construct( bool $use_socket, string $hostname = "localhost", int $port = 2375)
+    public function __construct( bool $use_socket = true, string $hostname = "localhost", int $port = 2375)
     {
         
         $this->use_socket = $use_socket;
