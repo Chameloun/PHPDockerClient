@@ -2,6 +2,8 @@
 
 namespace LocuTeam\PHPDockerClient;
 
+use LocuTeam\PHPDockerClient\DockerContainer;
+use LocuTeam\PHPDockerClient\DockerConfig;
 
 /**
  * 
@@ -95,7 +97,7 @@ final class PHPDockerClient {
      * @return any
      * 
      */
-    private function dockerApiRequest( HTTP_METHOD $method, string $path, array $data = array(), array $allowed_codes = array(200, 201, 202, 204)) {
+    private function dockerApiRequest( HTTP_METHOD $method, string $path, string $data = "", array $headers = array(), array $allowed_codes = array(200, 201, 202, 204)) {
 
         $curl = curl_init();
 
@@ -130,6 +132,19 @@ final class PHPDockerClient {
 
         }
 
+        if ($method === HTTP_METHOD::POST and $data !== "") {
+
+            $curl_config[CURLOPT_POSTFIELDS] = $data;
+            $curl_config[CURLOPT_HTTPHEADER] = array('Accept: application/json', 'Content-Type: application/json');
+
+        }
+
+        if (empty($headers)) {
+
+            $curl_config[CURLOPT_HTTPHEADER] = $headers;
+
+        }
+
         curl_setopt_array($curl, $curl_config);
         
         $response = curl_exec($curl);
@@ -140,11 +155,11 @@ final class PHPDockerClient {
 
             if (!in_array($info['http_code'], $allowed_codes)) {
 
-                throw new \ErrorException($response . " HTTP Code: " . $info['http_code'], 1, 1);
+                throw new \ErrorException(json_decode($response)->message . " HTTP Code: " . $info['http_code'], 1, 1);
 
             }
 
-            return json_decode($response, false);
+            return json_decode($response, false) !== NULL ? json_decode($response, false) : $response;
 
         } else {
 
@@ -164,9 +179,17 @@ final class PHPDockerClient {
      */
     public function listContainers(bool $running = false) {
 
+        $containers = array();
 
-        return $this->dockerApiRequest(HTTP_METHOD::GET, "/containers/json?all=" . $running, allowed_codes: array(200));
+        $containers_response = $this->dockerApiRequest(HTTP_METHOD::GET, "/containers/json?all=" . $running, allowed_codes: array(200));
 
+        foreach ($containers_response as $container) {
+
+            array_push($containers, new DockerContainer($container));
+
+        }
+
+        return $containers;
 
     }
 
@@ -207,7 +230,7 @@ final class PHPDockerClient {
 
         foreach ($containers as $container) {
 
-            array_push($ids, $container->Id);
+            array_push($ids, $container->getId());
 
         }
 
@@ -229,33 +252,11 @@ final class PHPDockerClient {
 
         foreach ($containers as $container) {
 
-            array_push($names, $container->Names[0]);
+            array_push($names, $container->getName());
 
         }
 
         return $names;
-
-    }
-
-    /**
-     * 
-     * @param bool $running
-     * 
-     * @return array
-     * 
-     */
-    public function listContainersNameId(bool $running = false) : array {
-
-        $containers = $this->listContainers($running);
-        $names_ids = array();
-
-        foreach ($containers as $container) {
-
-            $names_ids[$container->Names[0]] = $container->Id;
-
-        }
-
-        return $names_ids;
 
     }
 
@@ -270,7 +271,7 @@ final class PHPDockerClient {
         try {
 
             $container = $this->dockerApiRequest(HTTP_METHOD::GET, "/containers/" . $id_name . "/json", allowed_codes: array(200));
-            return array($container->Name => $container->Id);
+            return new DockerContainer((object)$container);
 
         } catch (\ErrorException $e) {
 
@@ -415,6 +416,38 @@ final class PHPDockerClient {
         }
 
         return $success;
+
+    }
+
+    public function createContainer(string $name, string $image, ...$config) {
+
+        $container_config = (new DockerContainerConfig($name, $image, ...$config))->createRequestBody();
+
+        try {
+
+            return ($this->dockerApiRequest(HTTP_METHOD::POST, '/containers/create?name=' . $name, $container_config, array(201)))->Id;
+
+        } catch (\ErrorException $e) {
+
+            var_dump($e->getMessage());
+            return false;
+
+        }
+
+    }
+
+    public function getContainerLogs(string $id_name) {
+
+        try {
+
+            return $this->dockerApiRequest(HTTP_METHOD::GET, '/containers/' . $id_name . '/logs?stdout=true&stderr=true', allowed_codes: array(200));
+
+        } catch (\ErrorException $e) {
+
+            var_dump($e->getMessage());
+            return false;
+
+        }
 
     }
 
