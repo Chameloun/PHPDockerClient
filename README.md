@@ -3,7 +3,7 @@ PHP client for Docker API
 
 ## Requirements
 
-* PHP 8.9 or higher
+* PHP 8.0 or higher
 * Docker API 1.41
 
 ## Installation
