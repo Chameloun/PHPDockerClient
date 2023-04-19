@@ -10,7 +10,7 @@ include __DIR__  .  '/../vendor/autoload.php' ;
 
 $client = new PHPDockerClient();
 
-$containers = $client->listContainersIds();
+$containers = $client->getContainer("/locuboard-docker-locuboard-web-1");
 
 var_dump($containers);
 

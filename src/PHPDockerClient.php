@@ -92,7 +92,7 @@ final class PHPDockerClient {
      * @param array $data
      * @param array $allowed_codes
      * 
-     * @return array
+     * @return any
      * 
      */
     private function dockerApiRequest( HTTP_METHOD $method, string $path, array $data = array(), array $allowed_codes = array(200, 201, 202, 204)) {
@@ -140,11 +140,11 @@ final class PHPDockerClient {
 
             if (!in_array($info['http_code'], $allowed_codes)) {
 
-                throw new \ErrorException("Request to Docker API failed! HTTP Code: " . $info['http_code'], 1, 1);
+                throw new \ErrorException($response . " HTTP Code: " . $info['http_code'], 1, 1);
 
             }
 
-            return json_decode($response);
+            return json_decode($response, false);
 
         } else {
 
@@ -160,10 +160,9 @@ final class PHPDockerClient {
      * 
      * @param bool $running
      * 
-     * @return array
      * 
      */
-    public function listContainers(bool $running = false) : array {
+    public function listContainers(bool $running = false) {
 
 
         return $this->dockerApiRequest(HTTP_METHOD::GET, "/containers/json?all=" . $running, allowed_codes: array(200));
@@ -201,7 +200,7 @@ final class PHPDockerClient {
      * @return array
      * 
      */
-    public function listContainersIds(bool $running = false) : array {
+    public function listContainersId(bool $running = false) : array {
 
         $containers = $this->listContainers($running);
         $ids = array();
@@ -213,6 +212,72 @@ final class PHPDockerClient {
         }
 
         return $ids;
+
+    }
+
+    /**
+     * 
+     * @param bool $running
+     * 
+     * @return array
+     * 
+     */
+    public function listContainersName(bool $running = false) : array {
+
+        $containers = $this->listContainers($running);
+        $names = array();
+
+        foreach ($containers as $container) {
+
+            array_push($names, $container->Names[0]);
+
+        }
+
+        return $names;
+
+    }
+
+    /**
+     * 
+     * @param bool $running
+     * 
+     * @return array
+     * 
+     */
+    public function listContainersNameId(bool $running = false) : array {
+
+        $containers = $this->listContainers($running);
+        $names_ids = array();
+
+        foreach ($containers as $container) {
+
+            $names_ids[$container->Names[0]] = $container->Id;
+
+        }
+
+        return $names_ids;
+
+    }
+
+    /**
+     * 
+     * @param string $id_name
+     * 
+     * 
+     */
+    public function getContainer( string $id_name ) {
+
+        try {
+
+            $container = $this->dockerApiRequest(HTTP_METHOD::GET, "/containers/" . $id_name . "/json", allowed_codes: array(200));
+            return array($container->Name => $container->Id);
+
+        } catch (\ErrorException $e) {
+
+            var_dump($e->getMessage());
+            return false;
+
+        }
 
     }
 
@@ -246,18 +311,19 @@ final class PHPDockerClient {
      */
     public function stopAllContainers() : bool {
 
-        $ids = $this->listContainersIds();
+        $ids = $this->listContainersId();
+        $success = true;
 
         foreach ($ids as $id) {
 
             $output = $this->stopContainer($id);
-            $this->waitForContainer($id);
+            $wait = $this->waitForContainer($id);
 
-            if (!$output) return false;
+            if ((!$output) or (!$wait)) $success = false;
 
         }
 
-        return true;
+        return $success;
 
     }
 
@@ -291,17 +357,18 @@ final class PHPDockerClient {
      */
     public function startAllContainers() : bool {
 
-        $ids = $this->listContainersIds(true);
+        $ids = $this->listContainersId(true);
+        $success = true;
 
         foreach ($ids as $id) {
 
             $output = $this->startContainer($id);
 
-            if (!$output) return false;
+            if (!$output) $success = false;
 
         }
 
-        return true;
+        return $success;
 
     }
 
@@ -334,19 +401,20 @@ final class PHPDockerClient {
      * @return bool
      * 
      */
-    public function restartAllContainers() : bool {
+    public function restartAllContainers(bool $running = false) : bool {
 
-        $ids = $this->listContainersIds();
+        $ids = $this->listContainersId($running);
+        $success = true;
 
         foreach ($ids as $id) {
 
             $output = $this->restartContainer($id);
 
-            if (!$output) return false;
+            if (!$output) $success = false;
 
         }
 
-        return true;
+        return $success;
 
     }
 
