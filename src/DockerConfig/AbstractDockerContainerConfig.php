@@ -7,8 +7,8 @@ use stdClass;
 abstract class AbstractDockerContainerConfig {
 
     public function __construct(
-        
-        public string $name,
+
+        public string $Name,
 
         public string $Image,
 
@@ -65,11 +65,11 @@ abstract class AbstractDockerContainerConfig {
 
     ){
 
-        if (!preg_match("/\/[a-zA-Z0-9][a-zA-Z0-9_.-]+$/i", $this->name)) {
-            $this->name = "/" . $this->name;
+        if (!preg_match("/\/[a-zA-Z0-9][a-zA-Z0-9_.-]+$/i", $this->Name)) {
+            $this->Name = "/" . $this->Name;
         }
 
-        if (!preg_match("/\/[a-zA-Z0-9][a-zA-Z0-9_.-]+$/i", $this->name)) {
+        if (!preg_match("/\/[a-zA-Z0-9][a-zA-Z0-9_.-]+$/i", $this->Name)) {
             
             throw new \ErrorException("Container name is wrong!", 1, 1);
 

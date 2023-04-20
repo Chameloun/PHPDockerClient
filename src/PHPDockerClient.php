@@ -132,16 +132,16 @@ final class PHPDockerClient {
 
         }
 
+        if (empty($headers)) {
+
+            $curl_config[CURLOPT_HTTPHEADER] = $headers;
+
+        }
+
         if ($method === HTTP_METHOD::POST and $data !== "") {
 
             $curl_config[CURLOPT_POSTFIELDS] = $data;
             $curl_config[CURLOPT_HTTPHEADER] = array('Accept: application/json', 'Content-Type: application/json');
-
-        }
-
-        if (empty($headers)) {
-
-            $curl_config[CURLOPT_HTTPHEADER] = $headers;
 
         }
 
@@ -200,7 +200,7 @@ final class PHPDockerClient {
      * @return bool
      * 
      */
-    private function waitForContainer( string $id ) : bool {
+    public function waitForContainer( string $id ) : bool {
 
         try {
 
@@ -419,13 +419,13 @@ final class PHPDockerClient {
 
     }
 
-    public function createContainer(string $name, string $image, ...$config) {
+    public function createContainer(DockerContainerConfig $config) {
 
-        $container_config = (new DockerContainerConfig($name, $image, ...$config))->createRequestBody();
+        $container_config = $config->createRequestBody();
 
         try {
 
-            return ($this->dockerApiRequest(HTTP_METHOD::POST, '/containers/create?name=' . $name, $container_config, array(201)))->Id;
+            return ($this->dockerApiRequest(HTTP_METHOD::POST, '/containers/create?name=' . $config->Name, $container_config, allowed_codes: array(201)))->Id;
 
         } catch (\ErrorException $e) {
 
