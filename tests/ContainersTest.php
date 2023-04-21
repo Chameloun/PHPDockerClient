@@ -1,10 +1,8 @@
 <?php 
 declare(strict_types=1);
 
-namespace LocuTeam\PHPDockerClient\Tests;
-
 use PHPUnit\Framework\TestCase;
-use LocuTeam\PHPDockerClient\PHPDockerClient;
+use LocuTeam\PHPDockerClient\DockerClient;
 
 final class ContainersTest extends TestCase
 {
@@ -12,7 +10,7 @@ final class ContainersTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->client = new PHPDockerClient();   
+        $this->client = new DockerClient();
     }
 
     public function testListContainers(): void

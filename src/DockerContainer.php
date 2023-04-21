@@ -4,10 +4,19 @@ namespace LocuTeam\PHPDockerClient;
 
 final class DockerContainer {
 
+    /**
+     * @var string
+     */
     private string $id;
 
+    /**
+     * @var string|mixed
+     */
     private string $name;
 
+    /**
+     * @param \stdClass $container_info
+     */
     public function __construct(\stdClass $container_info)
     {
         $this->id = $container_info->Id;
@@ -19,12 +28,18 @@ final class DockerContainer {
 
     }
 
+    /**
+     * @return string
+     */
     public function getId() : string {
 
         return $this->id;
 
     }
 
+    /**
+     * @return string
+     */
     public function getName() : string {
 
         return $this->name;

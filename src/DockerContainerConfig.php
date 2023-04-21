@@ -6,11 +6,17 @@ use LocuTeam\PHPDockerClient\DockerConfig\AbstractDockerContainerConfig;
 
 class DockerContainerConfig extends AbstractDockerContainerConfig {
 
+    /**
+     * @var string
+     */
     public string $Name;
 
-    public function createRequestBody()
+    /**
+     * @throws \JsonException
+     */
+    public function createRequestBody(): bool|string
     {
-        return json_encode($this);
+        return json_encode($this, JSON_THROW_ON_ERROR);
     }
 
 

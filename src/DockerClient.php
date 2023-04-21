@@ -2,9 +2,6 @@
 
 namespace LocuTeam\PHPDockerClient;
 
-use LocuTeam\PHPDockerClient\DockerContainer;
-use LocuTeam\PHPDockerClient\DockerConfig;
-
 /**
  * 
  * @enum HTTP_METHOD
@@ -28,7 +25,7 @@ enum HTTP_METHOD : string {
  * 
  */
 
-final class PHPDockerClient {
+final class DockerClient {
 
     # UNIX socket
 
@@ -335,11 +332,11 @@ final class PHPDockerClient {
      * @return bool
      * 
      */
-    public function startContainer( string $id ) : bool {
+    public function startContainer( string $id_name ) : bool {
 
         try {
 
-            $this->dockerApiRequest(HTTP_METHOD::POST, "/containers/" . $id . "/start", allowed_codes: array(204, 304));
+            $this->dockerApiRequest(HTTP_METHOD::POST, "/containers/" . $id_name . "/start", allowed_codes: array(204, 304));
             return true;
 
         } catch (\ErrorException $e) {
@@ -419,6 +416,11 @@ final class PHPDockerClient {
 
     }
 
+    /**
+     * @param DockerContainerConfig $config
+     * @return false
+     * @throws \JsonException
+     */
     public function createContainer(DockerContainerConfig $config) {
 
         $container_config = $config->createRequestBody();
@@ -436,11 +438,15 @@ final class PHPDockerClient {
 
     }
 
+    /**
+     * @param string $id_name
+     * @return false|any
+     */
     public function getContainerLogs(string $id_name) {
 
         try {
 
-            return $this->dockerApiRequest(HTTP_METHOD::GET, '/containers/' . $id_name . '/logs?stdout=true&stderr=true', allowed_codes: array(200));
+            return $this->dockerApiRequest(HTTP_METHOD::GET, '/containers/' . $id_name . '/logs?stdout=true&stderr=true', allowed_codes: array(200));    // preg_replace('/[\x00\x02\x1c\x01\x0a]/', '', $logs)
 
         } catch (\ErrorException $e) {
 
