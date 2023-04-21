@@ -85,14 +85,14 @@ final class DockerClient {
     }
 
     /**
-     * 
+     *
      * @param HTTP_METHOD $method
      * @param string $path
      * @param array $data
      * @param array $allowed_codes
-     * 
+     *
      * @return any
-     * 
+     *
      */
     private function dockerApiRequest( HTTP_METHOD $method, string $path, string $data = "", array $headers = array(), array $allowed_codes = array(200, 201, 202, 204)) {
 
@@ -150,21 +150,21 @@ final class DockerClient {
 
         if (!curl_errno($curl)) {
 
+            curl_close($curl);
+
             if (!in_array($info['http_code'], $allowed_codes)) {
 
                 throw new \ErrorException(json_decode($response)->message . " HTTP Code: " . $info['http_code'], 1, 1);
 
             }
 
-            return json_decode($response, false) !== NULL ? json_decode($response, false) : $response;
+            return json_decode($response, false) ?? $response;
 
         } else {
 
             throw new \ErrorException("Request to Docker API failed!", 1, 1);
 
         }
-        
-        curl_close($curl);
 
     }
 
@@ -182,7 +182,7 @@ final class DockerClient {
 
         foreach ($containers_response as $container) {
 
-            array_push($containers, new DockerContainer($container));
+            $containers[] = new DockerContainer($container);
 
         }
 
@@ -227,7 +227,7 @@ final class DockerClient {
 
         foreach ($containers as $container) {
 
-            array_push($ids, $container->getId());
+            $ids[] = $container->getId();
 
         }
 
@@ -249,7 +249,7 @@ final class DockerClient {
 
         foreach ($containers as $container) {
 
-            array_push($names, $container->getName());
+            $names[] = $container->getName();
 
         }
 
@@ -442,11 +442,37 @@ final class DockerClient {
      * @param string $id_name
      * @return false|any
      */
-    public function getContainerLogs(string $id_name) {
+    public function getContainerLogs(string $id_name): string|bool
+    {
 
         try {
 
-            return $this->dockerApiRequest(HTTP_METHOD::GET, '/containers/' . $id_name . '/logs?stdout=true&stderr=true', allowed_codes: array(200));    // preg_replace('/[\x00\x02\x1c\x01\x0a]/', '', $logs)
+            $logs = $this->dockerApiRequest(HTTP_METHOD::GET, '/containers/' . $id_name . '/logs?stdout=true&stderr=true', allowed_codes: array(200));
+            $logs = preg_replace('/[\x00\x02\x1c\x01\x1e]/', '', $logs);
+
+            $lines = explode("\n", $logs);
+
+            for ($i = 1, $iMax = count($lines); $i < $iMax; $i++) {
+                $lines[$i] = substr($lines[$i], 1);
+            }
+            unset($line);
+
+            return implode("\n", $lines);
+
+        } catch (\ErrorException $e) {
+
+            var_dump($e->getMessage());
+            return false;
+
+        }
+
+    }
+
+    public function removeContainer( string $id_name, bool $delete_volumes = false, bool $force = false, bool $delete_link = false) {
+
+        try {
+
+            return $this->dockerApiRequest(HTTP_METHOD::DELETE, '/containers/' . $id_name . "?v=" . $delete_volumes . "&force=" . $force . "&link=" . $delete_link, allowed_codes: array(204));
 
         } catch (\ErrorException $e) {
 
