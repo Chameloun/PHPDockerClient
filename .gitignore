@@ -1,4 +1,6 @@
 vendor
 examples/local*
 .idea
-
+.phpdoc
+.DS_Store
+.phpunit.result.cache
