@@ -17,7 +17,7 @@ final class DockerContainer {
     /**
      * @var \stdClass
      */
-    private \stdClass $state;
+    private \stdClass|string $state;
 
     /**
      * @param \stdClass $container_info

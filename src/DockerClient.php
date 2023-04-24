@@ -153,6 +153,21 @@ final class DockerClient {
 
     }
 
+    private function formatContainerLogs( string $logs ) {
+
+        $logs = preg_replace('/[\x00\x02\x1c\x01\x1e]/', '', $logs);
+
+        $lines = explode("\n", $logs);
+
+        for ($i = 1, $iMax = count($lines); $i < $iMax; $i++) {
+            $lines[$i] = substr($lines[$i], 1);
+        }
+        unset($line);
+
+        return implode("\n", $lines);
+
+    }
+
     /**
      * 
      * @param bool $running
@@ -432,17 +447,31 @@ final class DockerClient {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stdout=true&stderr=true', allowed_codes: array(200));
-            $logs = preg_replace('/[\x00\x02\x1c\x01\x1e]/', '', $logs);
+            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stdout=true', allowed_codes: array(200));
 
-            $lines = explode("\n", $logs);
+            return $this->formatContainerLogs($logs);
 
-            for ($i = 1, $iMax = count($lines); $i < $iMax; $i++) {
-                $lines[$i] = substr($lines[$i], 1);
-            }
-            unset($line);
+        } catch (\ErrorException $e) {
 
-            return implode("\n", $lines);
+            var_dump($e->getMessage());
+            return false;
+
+        }
+
+    }
+
+    /**
+     * @param string $id_name
+     * @return false|any
+     */
+    public function getContainerErrorLogs(string $id_name): string|bool
+    {
+
+        try {
+
+            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stderr=true', allowed_codes: array(200));
+
+            return $this->formatContainerLogs($logs);
 
         } catch (\ErrorException $e) {
 
