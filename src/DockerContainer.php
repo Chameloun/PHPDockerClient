@@ -7,17 +7,17 @@ final class DockerContainer {
     /**
      * @var string
      */
-    private string $id;
+    public string $id;
 
     /**
      * @var string|mixed
      */
-    private string $name;
+    public string $name;
 
     /**
      * @var \stdClass
      */
-    private \stdClass|string $state;
+    public \stdClass|string $state;
 
     /**
      * @param \stdClass $container_info

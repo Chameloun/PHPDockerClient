@@ -8,7 +8,8 @@ use LocuTeam\PHPDockerClient\DockerClient;
 include __DIR__  .  '/../vendor/autoload.php' ;
 
 
-$client = new DockerClient();
+$client = new DockerClient(false, "192.168.1.81");
+//$client->setUnixSocket("/run/docker.sock");
 
 $client->pullImage("gcc","latest");
 
