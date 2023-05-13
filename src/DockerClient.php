@@ -442,14 +442,14 @@ final class DockerClient {
      * @param string $id_name
      * @return false|any
      */
-    public function getContainerLogs(string $id_name): string|bool
+    public function getContainerLogs(string $id_name, bool $raw = false): string|bool
     {
 
         try {
 
             $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stdout=true', allowed_codes: array(200));
 
-            return $this->formatContainerLogs($logs);
+            return $raw ? $logs : $this->formatContainerLogs($logs);
 
         } catch (\ErrorException $e) {
 
@@ -464,14 +464,14 @@ final class DockerClient {
      * @param string $id_name
      * @return false|any
      */
-    public function getContainerErrorLogs(string $id_name): string|bool
+    public function getContainerErrorLogs(string $id_name, bool $raw = false): string|bool
     {
 
         try {
 
             $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stderr=true', allowed_codes: array(200));
 
-            return $this->formatContainerLogs($logs);
+            return $raw ? $logs : $this->formatContainerLogs($logs);
 
         } catch (\ErrorException $e) {
 
