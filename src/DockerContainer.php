@@ -63,9 +63,9 @@ final class DockerContainer {
     }
 
     /**
-     * @return bool
+     * @return any
      */
-    public function getStatus(): bool {
+    public function getStatus(): any {
 
         return $this->state->Status;
 
