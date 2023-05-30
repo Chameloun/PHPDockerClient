@@ -107,6 +107,33 @@ final class DockerContainer {
 
     }
 
+    /**
+     * @return \DateTime
+     */
+    public function getStartedAt(): \DateTime {
+
+        return new \DateTime($this->state->StartedAt);
+
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getFinishedTime(): \DateTime {
+
+        return new \DateTime($this->state->FinishedAt);
+
+    }
+
+    /**
+     * @return \DateInterval
+     */
+    public function getRunDuration(): \DateInterval {
+
+        return date_diff($this->getStartedAt(), $this->getFinishedTime());
+
+    }
+
 }
 
 ?>

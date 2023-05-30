@@ -11,12 +11,16 @@ include __DIR__  .  '/../vendor/autoload.php' ;
 
 $client = new DockerClient();
 
-$config = new DockerContainerConfig("ubuntuExample", "ubuntu", Tty: true);
+$config = new DockerContainerConfig("gcc", "gcc:latest");
 
 $client->createContainer($config);
 
-$client->startContainer("ubuntuExample");
+$client->startContainer("gcc");
 
-var_dump($client->getContainer("ubuntuExample"));
+$client->waitForContainer("gcc");
+
+var_dump($client->getContainer("gcc")->getRunDuration());
+
+$client->removeContainer("gcc");
 
 ?>
