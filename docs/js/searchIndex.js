@@ -21,6 +21,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_dockerApiRequest"
         },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AformatContainerLogs\u0028\u0029",
+            "name": "formatContainerLogs",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_formatContainerLogs"
+        },                {
             "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AlistContainers\u0028\u0029",
             "name": "listContainers",
             "summary": "",
@@ -86,6 +91,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_getContainerLogs"
         },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AgetContainerErrorLogs\u0028\u0029",
+            "name": "getContainerErrorLogs",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_getContainerErrorLogs"
+        },                {
             "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AremoveContainer\u0028\u0029",
             "name": "removeContainer",
             "summary": "",
@@ -106,6 +116,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_getImage"
         },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AsetWorkingContainer\u0028\u0029",
+            "name": "setWorkingContainer",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_setWorkingContainer"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AisWorkingContainerSet\u0028\u0029",
+            "name": "isWorkingContainerSet",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_isWorkingContainerSet"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AgetWorkingContainer\u0028\u0029",
+            "name": "getWorkingContainer",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_getWorkingContainer"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003AunsetWorkingContainer\u0028\u0029",
+            "name": "unsetWorkingContainer",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#method_unsetWorkingContainer"
+        },                {
             "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003A\u0024unix_socket",
             "name": "unix_socket",
             "summary": "",
@@ -125,6 +155,11 @@ Search.appendIndex(
             "name": "use_socket",
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#property_use_socket"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerClient\u003A\u003A\u0024working_container_id_name",
+            "name": "working_container_id_name",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#property_working_container_id_name"
         },                {
             "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig",
             "name": "AbstractDockerContainerConfig",
@@ -661,6 +696,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getError"
         },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetStartedAt\u0028\u0029",
+            "name": "getStartedAt",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getStartedAt"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetFinishedTime\u0028\u0029",
+            "name": "getFinishedTime",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getFinishedTime"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetRunDuration\u0028\u0029",
+            "name": "getRunDuration",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getRunDuration"
+        },                {
             "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -685,6 +735,11 @@ Search.appendIndex(
             "name": "createRequestBody",
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerContainerConfig.html#method_createRequestBody"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerConfig\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerConfig.html#method_getName"
         },                {
             "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerConfig\u003A\u003A\u0024Name",
             "name": "Name",
@@ -851,6 +906,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_Containers"
         },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum",
+            "name": "DockerErrorCodeEnum",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerError-DockerErrorCodeEnum.html"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003AERROR",
+            "name": "ERROR",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003AWARNING",
+            "name": "WARNING",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003ASUCCESS",
+            "name": "SUCCESS",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerException",
+            "name": "DockerException",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerError-DockerException.html"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerException\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/LocuTeam-PHPDockerClient-DockerError-DockerException.html#method___construct"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -870,5 +955,10 @@ Search.appendIndex(
             "name": "DockerConfig",
             "summary": "",
             "url": "namespaces/locuteam-phpdockerclient-dockerconfig.html"
+        },                {
+            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError",
+            "name": "DockerError",
+            "summary": "",
+            "url": "namespaces/locuteam-phpdockerclient-dockererror.html"
         }            ]
 );

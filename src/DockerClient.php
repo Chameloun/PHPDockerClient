@@ -3,6 +3,8 @@
 namespace LocuTeam\PHPDockerClient;
 
 use LocuTeam\PHPDockerClient\DockerConfig\HttpMethodEnum;
+use LocuTeam\PHPDockerClient\DockerError\DockerException;
+use LocuTeam\PHPDockerClient\DockerError\DockerErrorCodeEnum;
 
 /**
  * 
@@ -38,6 +40,11 @@ final class DockerClient {
     private bool $use_socket;
 
     /**
+     * @var string|null
+     */
+    private string | null $working_container_id_name = null;
+
+    /**
      * 
      * @param bool $use_socket
      * @param string $hostname
@@ -63,27 +70,24 @@ final class DockerClient {
      * @param string $unix_socket
      * 
      */
-    public function setUnixSocket( string $unix_socket ) {
+    public function setUnixSocket( string $unix_socket ) : void {
 
         $this->unix_socket = $unix_socket;
 
     }
 
     /**
-     *
      * @param HttpMethodEnum $method
      * @param string $path
-     * @param array $data
+     * @param string $data
+     * @param array $headers
      * @param array $allowed_codes
-     *
-     * @return any
-     *
+     * @return object
+     * @throws DockerException
      */
-    private function dockerApiRequest(HttpMethodEnum $method, string $path, string $data = "", array $headers = array(), array $allowed_codes = array(200, 201, 202, 204)) {
+    private function dockerApiRequest(HttpMethodEnum $method, string $path, string $data = "", array $headers = array(), array $allowed_codes = array(200, 201, 202, 204)) : object {
 
         $curl = curl_init();
-
-        $curl_config = array();
 
         if ($this->use_socket) {
 
@@ -139,21 +143,49 @@ final class DockerClient {
 
             if (!in_array($info['http_code'], $allowed_codes, true)) {
 
-                throw new \ErrorException(json_decode($response, false)->message . " HTTP Code: " . $info['http_code'], 1, 1);
+                try {
+
+                    $message = json_decode($response, false, 512, JSON_THROW_ON_ERROR)->message . " HTTP Code: " . $info['http_code'];
+
+                } catch (\JsonException $e) {
+
+                    $message = "Request to Docker API failed! HTTP Code: " . $info['http_code'] . " Response: " . rtrim($response, PHP_EOL) . ".";
+                    
+                }
+                
+                throw new DockerException($message, DockerErrorCodeEnum::ERROR);
 
             }
 
-            return json_decode($response, false) ?? $response;
+            if ($response === "") {
 
-        } else {
+                return (object)array();
 
-            throw new \ErrorException("Request to Docker API failed!", 1, 1);
+            }
+
+            try {
+
+                $message = (object)json_decode($response, false, 512, JSON_THROW_ON_ERROR);
+
+            } catch (\JsonException $e) {
+
+                throw new DockerException($e->getMessage(), DockerErrorCodeEnum::ERROR);
+
+            }
+
+            return $message;
 
         }
 
+        throw new DockerException("Request to Docker API failed!", DockerErrorCodeEnum::ERROR);
+
     }
 
-    private function formatContainerLogs( string $logs ) {
+    /**
+     * @param string $logs
+     * @return string
+     */
+    private function formatContainerLogs(string $logs): string {
 
         $logs = preg_replace('/[\x00\x02\x1c\x01\x1e]/', '', $logs);
 
@@ -167,59 +199,42 @@ final class DockerClient {
         return implode("\n", $lines);
 
     }
-
-    /**
-     * 
-     * @param bool $running
-     * 
-     * 
-     */
-    public function listContainers(bool $running = false) {
-
-        $containers = array();
-
-        $containers_response = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/json?all=" . $running, allowed_codes: array(200));
-
-        foreach ($containers_response as $container) {
-
-            $containers[] = new DockerContainer($container);
-
-        }
-
-        return $containers;
-
-    }
-
-    /**
-     * 
-     * @param string $id
-     * 
-     * @return bool
-     * 
-     */
-    public function waitForContainer( string $id_name ) : bool {
+    public function listContainers(bool $all = false) : array {
 
         try {
 
-            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . $id_name . "/wait", allowed_codes: array(200));
-            return true;
+            $containers = array();
 
-        } catch (\ErrorException $e) {
+            $containers_response = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/json?all=" . $all, allowed_codes: array(200));
 
-            var_dump($e->getMessage());
-            return false;
+            foreach ($containers_response as $container) {
+
+                $containers[] = new DockerContainer($container);
+
+            }
+
+            return $containers;
+
+        } catch (DockerException $e) {
+
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
+    public function waitForContainer( ?string $id_name = null ) : void {
 
-    /**
-     * 
-     * @param bool $running
-     * 
-     * @return array
-     * 
-     */
+        try {
+
+            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/wait", allowed_codes: array(200));
+
+        } catch (DockerException $e) {
+
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
+
+        }
+
+    }
     public function listContainersId(bool $running = false) : array {
 
         $containers = $this->listContainers($running);
@@ -234,14 +249,6 @@ final class DockerClient {
         return $ids;
 
     }
-
-    /**
-     * 
-     * @param bool $running
-     * 
-     * @return array
-     * 
-     */
     public function listContainersName(bool $running = false) : array {
 
         $containers = $this->listContainers($running);
@@ -256,278 +263,177 @@ final class DockerClient {
         return $names;
 
     }
-
-    /**
-     * 
-     * @param string $id_name
-     * 
-     * 
-     */
-    public function getContainer( string $id_name ) {
+    public function getContainer( ?string $id_name = null ) {
 
         try {
 
-            $container = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/" . $id_name . "/json", allowed_codes: array(200));
-            return new DockerContainer((object)$container);
+            $container = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/json", allowed_codes: array(200));
+            return new DockerContainer($container);
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * 
-     * @param string $id
-     * 
-     * @return bool
-     * 
-     */
-    public function stopContainer( string $id ) : bool {
+    public function stopContainer( ?string $id_name = null ) : void {
 
         try {
 
-            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . $id . "/stop", allowed_codes: array(204, 304));
-            return true;
+            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/stop", allowed_codes: array(204, 304));
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * 
-     * @return bool
-     * 
-     */
-    public function stopAllContainers() : bool {
+    public function stopAllContainers() : void {
 
         $ids = $this->listContainersId();
-        $success = true;
 
         foreach ($ids as $id) {
 
-            $output = $this->stopContainer($id);
-            $wait = $this->waitForContainer($id);
-
-            if ((!$output) or (!$wait)) $success = false;
+            $this->stopContainer($id);
+            $this->waitForContainer($id);
 
         }
 
-        return $success;
-
     }
-
-    /**
-     * 
-     * @param string $id
-     * 
-     * @return bool
-     * 
-     */
-    public function startContainer( string $id_name ) : bool {
+    public function startContainer( ?string $id_name = null ) : void {
 
         try {
 
-            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . $id_name . "/start", allowed_codes: array(204, 304));
-            return true;
+            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/start", allowed_codes: array(204, 304));
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * 
-     * @return bool
-     * 
-     */
-    public function startAllContainers() : bool {
+    public function startAllContainers() : void {
 
         $ids = $this->listContainersId(true);
-        $success = true;
 
         foreach ($ids as $id) {
 
-            $output = $this->startContainer($id);
-
-            if (!$output) $success = false;
+            $this->startContainer($id);
 
         }
 
-        return $success;
-
     }
-
-    /**
-     * 
-     * @param string $id
-     * 
-     * @return bool
-     * 
-     */
-    public function restartContainer( string $id ) : bool {
+    public function restartContainer( string $id ) : void {
 
         try {
 
             $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . $id . "/restart", allowed_codes: array(204));
-            return true;
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
+    public function restartAllContainers(bool $all = false) : void {
 
-    /**
-     * 
-     * 
-     * @return bool
-     * 
-     */
-    public function restartAllContainers(bool $running = false) : bool {
-
-        $ids = $this->listContainersId($running);
-        $success = true;
+        $ids = $this->listContainersId($all);
 
         foreach ($ids as $id) {
 
-            $output = $this->restartContainer($id);
-
-            if (!$output) $success = false;
+            $this->restartContainer($id);
 
         }
 
-        return $success;
-
     }
-
-    /**
-     * @param DockerContainerConfig $config
-     * @return false
-     * @throws \JsonException
-     */
-    public function createContainer(DockerContainerConfig $config) {
-
-        $container_config = $config->createRequestBody();
+    public function createContainer(DockerContainerConfig $config) : string {
 
         try {
 
-            return ($this->dockerApiRequest(HttpMethodEnum::POST, '/containers/create?name=' . $config->Name, $container_config, allowed_codes: array(201)))->Id;
+            $container_config = $config->createRequestBody();
 
-        } catch (\ErrorException $e) {
+            $this->setWorkingContainer($config->getName());
 
-            var_dump($e->getMessage());
-            return false;
+        } catch (\JsonException $e) {
+
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
+
+        }
+
+        try {
+
+            return ($this->dockerApiRequest(HttpMethodEnum::POST, '/containers/create?name=' . $config->getName(), $container_config, allowed_codes: array(201)))->Id;
+
+        } catch (DockerException $e) {
+
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * @param string $id_name
-     * @return false|any
-     */
-    public function getContainerLogs(string $id_name, bool $raw = false): string|bool
+    public function getContainerLogs(?string $id_name = null, bool $raw = false): string
     {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stdout=true', allowed_codes: array(200));
+            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($this->getWorkingContainer() ?? $id_name) . '/logs?stdout=true', allowed_codes: array(200));
 
             return $raw ? $logs : $this->formatContainerLogs($logs);
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * @param string $id_name
-     * @return false|any
-     */
-    public function getContainerErrorLogs(string $id_name, bool $raw = false): string|bool
+    public function getContainerErrorLogs(?string $id_name = null, bool $raw = false): string
     {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . $id_name . '/logs?stderr=true', allowed_codes: array(200));
+            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($this->getWorkingContainer() ?? $id_name) . '/logs?stderr=true', allowed_codes: array(200));
 
             return $raw ? $logs : $this->formatContainerLogs($logs);
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * @param string $id_name
-     * @param bool $delete_volumes
-     * @param bool $force
-     * @param bool $delete_link
-     * @return false|any
-     */
-    public function removeContainer(string $id_name, bool $delete_volumes = false, bool $force = false, bool $delete_link = false) {
+    public function removeContainer(?string $id_name = null, bool $delete_volumes = false, bool $force = false, bool $delete_link = false) : object {
 
         try {
 
-            return $this->dockerApiRequest(HttpMethodEnum::DELETE, '/containers/' . $id_name . "?v=" . $delete_volumes . "&force=" . $force . "&link=" . $delete_link, allowed_codes: array(204));
+            return $this->dockerApiRequest(HttpMethodEnum::DELETE, '/containers/' . ($this->getWorkingContainer() ?? $id_name) . "?v=" . $delete_volumes . "&force=" . $force . "&link=" . $delete_link, allowed_codes: array(204));
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * @param string $image
-     * @param string $tag
-     * @return false|any
-     */
-    public function pullImage(string $image, string $tag ) {
+    public function pullImage(string $image, string $tag ) : object {
 
         try {
 
             return $this->dockerApiRequest(HttpMethodEnum::POST, "/images/create?fromImage=" . $image . "&tag=" . $tag, allowed_codes: array(200));
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
-
-    /**
-     * @return array|false
-     */
-    public function listAllImages() {
+    public function listAllImages() : array {
 
         try {
 
@@ -542,36 +448,71 @@ final class DockerClient {
 
             return $images;
 
-        } catch (\ErrorException $e) {
+        } catch (DockerException $e) {
 
-            var_dump($e->getMessage());
-            return false;
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
+
+        }
+
+    }
+    public function getImage(string $name, string $tag ) : DockerImage {
+
+        try {
+
+            $container = $this->dockerApiRequest(HttpMethodEnum::GET, '/images/json?filters={"reference":["' . $name . ':' . $tag .'"]}', allowed_codes: array(200));
+
+            if (empty($container)) {
+                throw new DockerException("Image not found!", DockerErrorCodeEnum::WARNING);
+            }
+
+            return new DockerImage($container);
+
+        } catch (DockerException $e) {
+
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
 
         }
 
     }
 
     /**
-     * @param string $name
-     * @param string $tag
-     * @return false|DockerImage
+     * @param string $id_name
+     * @return $this
      */
-    public function getImage(string $name, string $tag ) {
+    public function setWorkingContainer(string $id_name) {
 
-        try {
+        $this->working_container_id_name = $id_name;
 
-            $container = $this->dockerApiRequest(HttpMethodEnum::GET, '/images/json?filters={"reference":["' . $name . ':' . $tag .'"]}', allowed_codes: array(200));
+        return $this;
 
-            if (empty($container)) return false;
+    }
 
-            return new DockerImage((object)$container[0]);
+    /**
+     * @return bool
+     */
+    public function isWorkingContainerSet() {
 
-        } catch (\ErrorException $e) {
+        return !empty($this->working_container_id_name);
 
-            var_dump($e->getMessage());
-            return false;
+    }
 
-        }
+    /**
+     * @return string|null
+     */
+    public function getWorkingContainer() {
+
+        return $this->working_container_id_name;
+
+    }
+
+    /**
+     * @return $this
+     */
+    public function unsetWorkingContainer() {
+
+        $this->working_container_id_name = null;
+
+        return $this;
 
     }
 
