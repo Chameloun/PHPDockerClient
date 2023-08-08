@@ -1,8 +1,8 @@
 <?php
 
-namespace LocuTeam\PHPDockerClient;
+namespace Chameloun\PHPDockerClient;
 
-use LocuTeam\PHPDockerClient\DockerConfig\AbstractDockerContainerHostConfig;
+use Chameloun\PHPDockerClient\DockerConfig\AbstractDockerContainerHostConfig;
 
 class DockerContainerHostConfig extends AbstractDockerContainerHostConfig
 {

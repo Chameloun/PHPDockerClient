@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace LocuTeam\PHPDockerClient\Examples;
+namespace Chameloun\PHPDockerClient\Examples;
 
-use LocuTeam\PHPDockerClient\DockerClient;
+use Chameloun\PHPDockerClient\DockerClient;
 
 include __DIR__  .  '/../vendor/autoload.php' ;
 

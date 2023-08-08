@@ -1,10 +1,10 @@
 <?php
 
-namespace LocuTeam\PHPDockerClient;
+namespace Chameloun\PHPDockerClient;
 
-use LocuTeam\PHPDockerClient\DockerConfig\HttpMethodEnum;
-use LocuTeam\PHPDockerClient\DockerError\DockerException;
-use LocuTeam\PHPDockerClient\DockerError\DockerErrorCodeEnum;
+use Chameloun\PHPDockerClient\DockerConfig\HttpMethodEnum;
+use Chameloun\PHPDockerClient\DockerError\DockerException;
+use Chameloun\PHPDockerClient\DockerError\DockerErrorCodeEnum;
 
 /**
  * 

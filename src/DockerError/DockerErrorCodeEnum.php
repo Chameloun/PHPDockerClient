@@ -1,6 +1,6 @@
 <?php
 
-namespace LocuTeam\PHPDockerClient\DockerError;
+namespace Chameloun\PHPDockerClient\DockerError;
 
 /**
  *

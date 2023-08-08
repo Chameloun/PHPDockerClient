@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LocuTeam\\PHPDockerClient\\": "src/"
+            "Chameloun\\PHPDockerClient\\": "src/"
         }
     },
     "authors": [
