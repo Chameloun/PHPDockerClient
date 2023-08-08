@@ -19,7 +19,7 @@ $client->startContainer("gcc");
 
 $client->waitForContainer("gcc");
 
-var_dump($client->getContainer("gcc")->getRunDuration());
+var_dump($client->getContainerLogs());
 
 $client->removeContainer("gcc");
 
