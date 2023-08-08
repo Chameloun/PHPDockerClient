@@ -1,5 +1,5 @@
 {
-    "name": "locuteam/docker-php-client",
+    "name": "chameloun/docker-php-client",
     "description": "PHP client for Docker API",
     "type": "library",
     "license": "MIT",
