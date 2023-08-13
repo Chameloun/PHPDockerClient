@@ -1,10 +1,10 @@
 <?php
 
-namespace LocuTeam\PHPDockerClient;
+namespace Chameloun\PHPDockerClient;
 
-use LocuTeam\PHPDockerClient\DockerConfig\HttpMethodEnum;
-use LocuTeam\PHPDockerClient\DockerError\DockerException;
-use LocuTeam\PHPDockerClient\DockerError\DockerErrorCodeEnum;
+use Chameloun\PHPDockerClient\DockerConfig\HttpMethodEnum;
+use Chameloun\PHPDockerClient\DockerError\DockerException;
+use Chameloun\PHPDockerClient\DockerError\DockerErrorCodeEnum;
 
 /**
  * 
@@ -226,7 +226,7 @@ final class DockerClient {
 
         try {
 
-            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/wait", allowed_codes: array(200));
+            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($id_name ?? $this->getWorkingContainer()) . "/wait", allowed_codes: array(200));
 
         } catch (DockerException $e) {
 
@@ -267,7 +267,7 @@ final class DockerClient {
 
         try {
 
-            $container = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/json", allowed_codes: array(200));
+            $container = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/" . ($id_name ?? $this->getWorkingContainer()) . "/json", allowed_codes: array(200));
             return new DockerContainer($container);
 
         } catch (DockerException $e) {
@@ -281,7 +281,7 @@ final class DockerClient {
 
         try {
 
-            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/stop", allowed_codes: array(204, 304));
+            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($id_name ?? $this->getWorkingContainer()) . "/stop", allowed_codes: array(204, 304));
 
         } catch (DockerException $e) {
 
@@ -306,7 +306,7 @@ final class DockerClient {
 
         try {
 
-            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($this->getWorkingContainer() ?? $id_name) . "/start", allowed_codes: array(204, 304));
+            $this->dockerApiRequest(HttpMethodEnum::POST, "/containers/" . ($id_name ?? $this->getWorkingContainer()) . "/start", allowed_codes: array(204, 304));
 
         } catch (DockerException $e) {
 
@@ -380,7 +380,7 @@ final class DockerClient {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($this->getWorkingContainer() ?? $id_name) . '/logs?stdout=true', allowed_codes: array(200));
+            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stdout=true', allowed_codes: array(200));
 
             return $raw ? $logs : $this->formatContainerLogs($logs);
 
@@ -396,7 +396,7 @@ final class DockerClient {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($this->getWorkingContainer() ?? $id_name) . '/logs?stderr=true', allowed_codes: array(200));
+            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stderr=true', allowed_codes: array(200));
 
             return $raw ? $logs : $this->formatContainerLogs($logs);
 
@@ -411,7 +411,7 @@ final class DockerClient {
 
         try {
 
-            return $this->dockerApiRequest(HttpMethodEnum::DELETE, '/containers/' . ($this->getWorkingContainer() ?? $id_name) . "?v=" . $delete_volumes . "&force=" . $force . "&link=" . $delete_link, allowed_codes: array(204));
+            return $this->dockerApiRequest(HttpMethodEnum::DELETE, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . "?v=" . $delete_volumes . "&force=" . $force . "&link=" . $delete_link, allowed_codes: array(204));
 
         } catch (DockerException $e) {
 
