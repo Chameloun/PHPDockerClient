@@ -382,7 +382,7 @@ final class DockerClient {
 
             $logs = ($this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stdout=true', allowed_codes: array(200)))->message;
 
-            return $raw ? $logs : $this->formatContainerLogs($logs);
+            return $raw ? $logs : $this->formatContainerLogs($logs ?? "");
 
         } catch (DockerException $e) {
 
@@ -398,7 +398,7 @@ final class DockerClient {
 
             $logs = ($this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stderr=true', allowed_codes: array(200)))->message;
 
-            return $raw ? $logs : $this->formatContainerLogs($logs);
+            return $raw ? $logs : $this->formatContainerLogs($logs ?? "");
 
         } catch (DockerException $e) {
 
