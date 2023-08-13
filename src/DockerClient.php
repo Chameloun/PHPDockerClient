@@ -169,7 +169,7 @@ final class DockerClient {
 
             } catch (\JsonException $e) {
 
-                throw new DockerException($e->getMessage(), DockerErrorCodeEnum::ERROR);
+                $message = (object)array("message" => $response);
 
             }
 
@@ -380,7 +380,7 @@ final class DockerClient {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stdout=true', allowed_codes: array(200));
+            $logs = ($this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stdout=true', allowed_codes: array(200)))->message;
 
             return $raw ? $logs : $this->formatContainerLogs($logs);
 
@@ -396,7 +396,7 @@ final class DockerClient {
 
         try {
 
-            $logs = $this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stderr=true', allowed_codes: array(200));
+            $logs = ($this->dockerApiRequest(HttpMethodEnum::GET, '/containers/' . ($id_name ?? $this->getWorkingContainer()) . '/logs?stderr=true', allowed_codes: array(200)))->message;
 
             return $raw ? $logs : $this->formatContainerLogs($logs);
 
