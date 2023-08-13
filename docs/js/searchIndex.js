@@ -161,780 +161,780 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/LocuTeam-PHPDockerClient-DockerClient.html#property_working_container_id_name"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig",
             "name": "AbstractDockerContainerConfig",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#method___construct"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#method___construct"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003AcreateRequestBody\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003AcreateRequestBody\u0028\u0029",
             "name": "createRequestBody",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#method_createRequestBody"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#method_createRequestBody"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Name",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Name",
             "name": "Name",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Name"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Name"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Image",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Image",
             "name": "Image",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Image"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Image"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Platform",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Platform",
             "name": "Platform",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Platform"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Platform"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Hostname",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Hostname",
             "name": "Hostname",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Hostname"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Hostname"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Domainname",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Domainname",
             "name": "Domainname",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Domainname"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Domainname"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024User",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024User",
             "name": "User",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_User"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_User"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024AttachStdin",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024AttachStdin",
             "name": "AttachStdin",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_AttachStdin"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_AttachStdin"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024AttachStdout",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024AttachStdout",
             "name": "AttachStdout",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_AttachStdout"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_AttachStdout"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024AttachStderr",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024AttachStderr",
             "name": "AttachStderr",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_AttachStderr"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_AttachStderr"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024ExposedPorts",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024ExposedPorts",
             "name": "ExposedPorts",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_ExposedPorts"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_ExposedPorts"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Tty",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Tty",
             "name": "Tty",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Tty"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Tty"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024OpenStdin",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024OpenStdin",
             "name": "OpenStdin",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_OpenStdin"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_OpenStdin"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024StdinOnce",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024StdinOnce",
             "name": "StdinOnce",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_StdinOnce"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_StdinOnce"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Env",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Env",
             "name": "Env",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Env"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Env"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Cmd",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Cmd",
             "name": "Cmd",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Cmd"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Cmd"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024ArgsEscaped",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024ArgsEscaped",
             "name": "ArgsEscaped",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_ArgsEscaped"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_ArgsEscaped"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Volumes",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Volumes",
             "name": "Volumes",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Volumes"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Volumes"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024WorkingDir",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024WorkingDir",
             "name": "WorkingDir",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_WorkingDir"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_WorkingDir"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Entrypoint",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Entrypoint",
             "name": "Entrypoint",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Entrypoint"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Entrypoint"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024NetworkDisabled",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024NetworkDisabled",
             "name": "NetworkDisabled",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_NetworkDisabled"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_NetworkDisabled"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024MacAddress",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024MacAddress",
             "name": "MacAddress",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_MacAddress"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_MacAddress"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024OnBuild",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024OnBuild",
             "name": "OnBuild",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_OnBuild"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_OnBuild"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Labels",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Labels",
             "name": "Labels",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Labels"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Labels"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024StopSignal",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024StopSignal",
             "name": "StopSignal",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_StopSignal"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_StopSignal"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024StopTimeout",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024StopTimeout",
             "name": "StopTimeout",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_StopTimeout"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_StopTimeout"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Shell",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024Shell",
             "name": "Shell",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Shell"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_Shell"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024HostConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerConfig\u003A\u003A\u0024HostConfig",
             "name": "HostConfig",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_HostConfig"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerConfig.html#property_HostConfig"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig",
             "name": "AbstractDockerContainerHostConfig",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#method___construct"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#method___construct"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003AsetBinds\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003AsetBinds\u0028\u0029",
             "name": "setBinds",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#method_setBinds"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#method_setBinds"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuShares",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuShares",
             "name": "CpuShares",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuShares"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuShares"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Memory",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Memory",
             "name": "Memory",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Memory"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Memory"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CgroupParent",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CgroupParent",
             "name": "CgroupParent",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CgroupParent"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CgroupParent"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioWeight",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioWeight",
             "name": "BlkioWeight",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioWeight"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioWeight"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioWeightdevice",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioWeightdevice",
             "name": "BlkioWeightdevice",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioWeightdevice"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioWeightdevice"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceReadBps",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceReadBps",
             "name": "BlkioDeviceReadBps",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceReadBps"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceReadBps"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceWriteBps",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceWriteBps",
             "name": "BlkioDeviceWriteBps",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceWriteBps"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceWriteBps"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceReadIOps",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceReadIOps",
             "name": "BlkioDeviceReadIOps",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceReadIOps"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceReadIOps"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceWriteIOps",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024BlkioDeviceWriteIOps",
             "name": "BlkioDeviceWriteIOps",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceWriteIOps"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_BlkioDeviceWriteIOps"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuPeriod",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuPeriod",
             "name": "CpuPeriod",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuPeriod"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuPeriod"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuQuota",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuQuota",
             "name": "CpuQuota",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuQuota"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuQuota"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuRealtimePeriod",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuRealtimePeriod",
             "name": "CpuRealtimePeriod",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuRealtimePeriod"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuRealtimePeriod"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuRealtimeRuntime",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpuRealtimeRuntime",
             "name": "CpuRealtimeRuntime",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuRealtimeRuntime"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpuRealtimeRuntime"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpusetCpus",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpusetCpus",
             "name": "CpusetCpus",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpusetCpus"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpusetCpus"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpusetMems",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CpusetMems",
             "name": "CpusetMems",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpusetMems"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CpusetMems"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Devices",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Devices",
             "name": "Devices",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Devices"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Devices"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DeviceRequests",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DeviceRequests",
             "name": "DeviceRequests",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DeviceRequests"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DeviceRequests"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DeviceCgroupRules",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DeviceCgroupRules",
             "name": "DeviceCgroupRules",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DeviceCgroupRules"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DeviceCgroupRules"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024KernelMemory",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024KernelMemory",
             "name": "KernelMemory",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_KernelMemory"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_KernelMemory"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024KernelMemoryTCP",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024KernelMemoryTCP",
             "name": "KernelMemoryTCP",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_KernelMemoryTCP"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_KernelMemoryTCP"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MemoryReservation",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MemoryReservation",
             "name": "MemoryReservation",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MemoryReservation"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MemoryReservation"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MemorySwap",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MemorySwap",
             "name": "MemorySwap",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MemorySwap"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MemorySwap"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MemorySwappiness",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MemorySwappiness",
             "name": "MemorySwappiness",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MemorySwappiness"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MemorySwappiness"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024NanoCpus",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024NanoCpus",
             "name": "NanoCpus",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_NanoCpus"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_NanoCpus"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024OomKillDisable",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024OomKillDisable",
             "name": "OomKillDisable",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_OomKillDisable"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_OomKillDisable"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Init",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Init",
             "name": "Init",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Init"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Init"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PidsLimit",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PidsLimit",
             "name": "PidsLimit",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PidsLimit"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PidsLimit"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Ulimits",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Ulimits",
             "name": "Ulimits",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Ulimits"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Ulimits"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Binds",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Binds",
             "name": "Binds",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Binds"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Binds"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ContainerIDFile",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ContainerIDFile",
             "name": "ContainerIDFile",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ContainerIDFile"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ContainerIDFile"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024LogConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024LogConfig",
             "name": "LogConfig",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_LogConfig"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_LogConfig"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024NetworkMode",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024NetworkMode",
             "name": "NetworkMode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_NetworkMode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_NetworkMode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PortBindings",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PortBindings",
             "name": "PortBindings",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PortBindings"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PortBindings"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024RestartPolicy",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024RestartPolicy",
             "name": "RestartPolicy",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_RestartPolicy"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_RestartPolicy"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024AutoRemove",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024AutoRemove",
             "name": "AutoRemove",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_AutoRemove"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_AutoRemove"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024VolumeDriver",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024VolumeDriver",
             "name": "VolumeDriver",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_VolumeDriver"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_VolumeDriver"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024VolumesFrom",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024VolumesFrom",
             "name": "VolumesFrom",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_VolumesFrom"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_VolumesFrom"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Mounts",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Mounts",
             "name": "Mounts",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Mounts"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Mounts"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CapAdd",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CapAdd",
             "name": "CapAdd",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CapAdd"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CapAdd"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CapDrop",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CapDrop",
             "name": "CapDrop",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CapDrop"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CapDrop"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CgroupnsMode",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024CgroupnsMode",
             "name": "CgroupnsMode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CgroupnsMode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_CgroupnsMode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Dns",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Dns",
             "name": "Dns",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Dns"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Dns"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DnsOptions",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DnsOptions",
             "name": "DnsOptions",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DnsOptions"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DnsOptions"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DnsSearch",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024DnsSearch",
             "name": "DnsSearch",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DnsSearch"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_DnsSearch"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ExtraHosts",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ExtraHosts",
             "name": "ExtraHosts",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ExtraHosts"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ExtraHosts"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024GroupAdd",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024GroupAdd",
             "name": "GroupAdd",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_GroupAdd"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_GroupAdd"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024IpcMode",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024IpcMode",
             "name": "IpcMode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_IpcMode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_IpcMode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Cgroup",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Cgroup",
             "name": "Cgroup",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Cgroup"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Cgroup"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Links",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Links",
             "name": "Links",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Links"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Links"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024OomScoreAdj",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024OomScoreAdj",
             "name": "OomScoreAdj",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_OomScoreAdj"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_OomScoreAdj"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PidMode",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PidMode",
             "name": "PidMode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PidMode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PidMode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Privileged",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Privileged",
             "name": "Privileged",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Privileged"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Privileged"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PublishAllPorts",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024PublishAllPorts",
             "name": "PublishAllPorts",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PublishAllPorts"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_PublishAllPorts"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ReadonlyRootfs",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ReadonlyRootfs",
             "name": "ReadonlyRootfs",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ReadonlyRootfs"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ReadonlyRootfs"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024SecurityOpt",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024SecurityOpt",
             "name": "SecurityOpt",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_SecurityOpt"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_SecurityOpt"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024StorageOpt",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024StorageOpt",
             "name": "StorageOpt",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_StorageOpt"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_StorageOpt"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Tmpfs",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Tmpfs",
             "name": "Tmpfs",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Tmpfs"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Tmpfs"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024UTSMode",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024UTSMode",
             "name": "UTSMode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_UTSMode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_UTSMode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024UsernsMode",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024UsernsMode",
             "name": "UsernsMode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_UsernsMode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_UsernsMode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ShmSize",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ShmSize",
             "name": "ShmSize",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ShmSize"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ShmSize"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Sysctls",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Sysctls",
             "name": "Sysctls",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Sysctls"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Sysctls"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Runtime",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024Runtime",
             "name": "Runtime",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Runtime"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_Runtime"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MaskedPaths",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024MaskedPaths",
             "name": "MaskedPaths",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MaskedPaths"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_MaskedPaths"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ReadonlyPaths",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\AbstractDockerContainerHostConfig\u003A\u003A\u0024ReadonlyPaths",
             "name": "ReadonlyPaths",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ReadonlyPaths"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-AbstractDockerContainerHostConfig.html#property_ReadonlyPaths"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer",
             "name": "DockerContainer",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method___construct"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method___construct"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getId"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getId"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getName"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getName"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AisRunning\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AisRunning\u0028\u0029",
             "name": "isRunning",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_isRunning"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_isRunning"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetStatus\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetStatus\u0028\u0029",
             "name": "getStatus",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getStatus"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getStatus"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AisPaused\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AisPaused\u0028\u0029",
             "name": "isPaused",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_isPaused"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_isPaused"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AisDead\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AisDead\u0028\u0029",
             "name": "isDead",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_isDead"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_isDead"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetExitCode\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetExitCode\u0028\u0029",
             "name": "getExitCode",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getExitCode"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getExitCode"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetError\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetError\u0028\u0029",
             "name": "getError",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getError"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getError"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetStartedAt\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetStartedAt\u0028\u0029",
             "name": "getStartedAt",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getStartedAt"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getStartedAt"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetFinishedTime\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetFinishedTime\u0028\u0029",
             "name": "getFinishedTime",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getFinishedTime"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getFinishedTime"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003AgetRunDuration\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003AgetRunDuration\u0028\u0029",
             "name": "getRunDuration",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#method_getRunDuration"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#method_getRunDuration"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024id",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#property_id"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#property_id"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024name",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#property_name"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#property_name"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024state",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainer\u003A\u003A\u0024state",
             "name": "state",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainer.html#property_state"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainer.html#property_state"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainerConfig",
             "name": "DockerContainerConfig",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerConfig.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainerConfig.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerConfig\u003A\u003AcreateRequestBody\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainerConfig\u003A\u003AcreateRequestBody\u0028\u0029",
             "name": "createRequestBody",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerConfig.html#method_createRequestBody"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainerConfig.html#method_createRequestBody"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerConfig\u003A\u003AgetName\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainerConfig\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerConfig.html#method_getName"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainerConfig.html#method_getName"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerConfig\u003A\u003A\u0024Name",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainerConfig\u003A\u003A\u0024Name",
             "name": "Name",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerConfig.html#property_Name"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainerConfig.html#property_Name"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerHostConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainerHostConfig",
             "name": "DockerContainerHostConfig",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerHostConfig.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainerHostConfig.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerContainerHostConfig\u003A\u003AsetBinds\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerContainerHostConfig\u003A\u003AsetBinds\u0028\u0029",
             "name": "setBinds",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerContainerHostConfig.html#method_setBinds"
+            "url": "classes/Chameloun-PHPDockerClient-DockerContainerHostConfig.html#method_setBinds"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum",
             "name": "HttpMethodEnum",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerConfig-HttpMethodEnum.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerConfig-HttpMethodEnum.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003AGET",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003AGET",
             "name": "GET",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003APOST",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003APOST",
             "name": "POST",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003APUT",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003APUT",
             "name": "PUT",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003ADELETE",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003ADELETE",
             "name": "DELETE",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003APATCH",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003APATCH",
             "name": "PATCH",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003AHEAD",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003AHEAD",
             "name": "HEAD",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003AOPTIONS",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig\\HttpMethodEnum\u003A\u003AOPTIONS",
             "name": "OPTIONS",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage",
             "name": "DockerImage",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method___construct"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method___construct"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getId"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getId"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetParentId\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetParentId\u0028\u0029",
             "name": "getParentId",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getParentId"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getParentId"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetRepoTags\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetRepoTags\u0028\u0029",
             "name": "getRepoTags",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getRepoTags"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getRepoTags"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetRepoDigests\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetRepoDigests\u0028\u0029",
             "name": "getRepoDigests",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getRepoDigests"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getRepoDigests"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetCreated\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetCreated\u0028\u0029",
             "name": "getCreated",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getCreated"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getCreated"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetSize\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetSize\u0028\u0029",
             "name": "getSize",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getSize"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getSize"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetSharedSize\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetSharedSize\u0028\u0029",
             "name": "getSharedSize",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getSharedSize"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getSharedSize"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetVirtualSize\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetVirtualSize\u0028\u0029",
             "name": "getVirtualSize",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getVirtualSize"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getVirtualSize"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetLabels\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetLabels\u0028\u0029",
             "name": "getLabels",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getLabels"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getLabels"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003AgetContainers\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003AgetContainers\u0028\u0029",
             "name": "getContainers",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#method_getContainers"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#method_getContainers"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Id",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Id",
             "name": "Id",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_Id"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_Id"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024ParentId",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024ParentId",
             "name": "ParentId",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_ParentId"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_ParentId"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024RepoTags",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024RepoTags",
             "name": "RepoTags",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_RepoTags"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_RepoTags"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024RepoDigests",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024RepoDigests",
             "name": "RepoDigests",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_RepoDigests"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_RepoDigests"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Created",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Created",
             "name": "Created",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_Created"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_Created"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Size",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Size",
             "name": "Size",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_Size"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_Size"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024SharedSize",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024SharedSize",
             "name": "SharedSize",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_SharedSize"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_SharedSize"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024VirtualSize",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024VirtualSize",
             "name": "VirtualSize",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_VirtualSize"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_VirtualSize"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Labels",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Labels",
             "name": "Labels",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_Labels"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_Labels"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Containers",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerImage\u003A\u003A\u0024Containers",
             "name": "Containers",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerImage.html#property_Containers"
+            "url": "classes/Chameloun-PHPDockerClient-DockerImage.html#property_Containers"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum",
             "name": "DockerErrorCodeEnum",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerError-DockerErrorCodeEnum.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerError-DockerErrorCodeEnum.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003AERROR",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003AERROR",
             "name": "ERROR",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003AWARNING",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003AWARNING",
             "name": "WARNING",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003ASUCCESS",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError\\DockerErrorCodeEnum\u003A\u003ASUCCESS",
             "name": "SUCCESS",
             "summary": "",
             "url": ""
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerException",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError\\DockerException",
             "name": "DockerException",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerError-DockerException.html"
+            "url": "classes/Chameloun-PHPDockerClient-DockerError-DockerException.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError\\DockerException\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError\\DockerException\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
-            "url": "classes/LocuTeam-PHPDockerClient-DockerError-DockerException.html#method___construct"
+            "url": "classes/Chameloun-PHPDockerClient-DockerError-DockerException.html#method___construct"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -951,14 +951,24 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/locuteam.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerConfig",
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerConfig",
             "name": "DockerConfig",
             "summary": "",
-            "url": "namespaces/locuteam-phpdockerclient-dockerconfig.html"
+            "url": "namespaces/chameloun-phpdockerclient-dockerconfig.html"
         },                {
-            "fqsen": "\\LocuTeam\\PHPDockerClient\\DockerError",
+            "fqsen": "\\Chameloun\\PHPDockerClient",
+            "name": "PHPDockerClient",
+            "summary": "",
+            "url": "namespaces/chameloun-phpdockerclient.html"
+        },                {
+            "fqsen": "\\Chameloun",
+            "name": "Chameloun",
+            "summary": "",
+            "url": "namespaces/chameloun.html"
+        },                {
+            "fqsen": "\\Chameloun\\PHPDockerClient\\DockerError",
             "name": "DockerError",
             "summary": "",
-            "url": "namespaces/locuteam-phpdockerclient-dockererror.html"
+            "url": "namespaces/chameloun-phpdockerclient-dockererror.html"
         }            ]
 );
