@@ -1,6 +1,6 @@
 <?php
 
-namespace LocuTeam\PHPDockerClient;
+namespace Chameloun\PHPDockerClient;
 
 final class DockerContainer {
 

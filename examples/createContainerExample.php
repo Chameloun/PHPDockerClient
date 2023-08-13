@@ -1,26 +1,26 @@
 <?php
 declare(strict_types=1);
 
-namespace LocuTeam\PHPDockerClient\Examples;
+namespace Chameloun\PHPDockerClient\Examples;
 
-use LocuTeam\PHPDockerClient\DockerClient;
-use LocuTeam\PHPDockerClient\DockerContainerConfig;
+use Chameloun\PHPDockerClient\DockerClient;
+use Chameloun\PHPDockerClient\DockerContainerConfig;
 
 include __DIR__  .  '/../vendor/autoload.php' ;
 
 
 $client = new DockerClient();
 
-$config = new DockerContainerConfig("gcc", "gcc:latest");
+$config1 = new DockerContainerConfig("gcc1", "gcc:latest");
+$config2 = new DockerContainerConfig("gcc2", "gcc:latest");
 
-$client->createContainer($config);
+$client->createContainer($config1);
+$client->createContainer($config2);
 
-$client->startContainer("gcc");
+$client->setWorkingContainer("gcc1");
+$client->removeContainer();
 
-$client->waitForContainer("gcc");
-
-var_dump($client->getContainer("gcc")->getRunDuration());
-
-$client->removeContainer("gcc");
+$client->setWorkingContainer("gcc2");
+$client->removeContainer();
 
 ?>

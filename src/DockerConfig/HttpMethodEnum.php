@@ -1,6 +1,6 @@
 <?php
 
-namespace LocuTeam\PHPDockerClient\DockerConfig;
+namespace Chameloun\PHPDockerClient\DockerConfig;
 
 /**
  *
