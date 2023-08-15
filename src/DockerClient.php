@@ -157,12 +157,6 @@ final class DockerClient {
 
             }
 
-            if ($response === "") {
-
-                return (object)array();
-
-            }
-
             try {
 
                 $message = (object)json_decode($response, false, 512, JSON_THROW_ON_ERROR);
