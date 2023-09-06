@@ -181,7 +181,7 @@ final class DockerClient {
      */
     private function formatContainerLogs(string $logs): string {
 
-        $logs = preg_replace('/[\x00\x02\x1c\x01\x1e]/', '', $logs);
+        $logs = preg_replace('/[\x00\x02\x1c\x01\x1e, \u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0002]/', '', $logs);
 
         $lines = explode("\n", $logs);
 

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use LocuTeam\PHPDockerClient\DockerClient;
+use Chameloun\PHPDockerClient\DockerClient;
 
 final class ContainersTest extends TestCase
 {
