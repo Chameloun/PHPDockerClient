@@ -5,6 +5,7 @@ namespace Chameloun\PHPDockerClient;
 use Chameloun\PHPDockerClient\DockerConfig\HttpMethodEnum;
 use Chameloun\PHPDockerClient\DockerError\DockerException;
 use Chameloun\PHPDockerClient\DockerError\DockerErrorCodeEnum;
+use PHPUnit\Util\Json;
 
 /**
  * 
@@ -193,13 +194,13 @@ final class DockerClient {
         return implode("\n", $lines);
 
     }
-    public function listContainers(bool $all = false) : array {
+    public function listContainers(bool $all = false, ?string $filter = null) : array {
 
         try {
 
             $containers = array();
 
-            $containers_response = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/json?all=" . $all, allowed_codes: array(200));
+            $containers_response = $this->dockerApiRequest(HttpMethodEnum::GET, "/containers/json?all=" . $all . (($filter) ? "&filters=" . $filter : ""), allowed_codes: array(200));
 
             foreach ($containers_response as $container) {
 
