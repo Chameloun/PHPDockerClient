@@ -35,9 +35,9 @@ final class DockerContainer {
 
         $this->state = $container_info->State;
 
-        $this->config = $container_info->Config;
+        $this->config = $container_info->Config ?? null;
 
-        $this->hostConfig = $container_info->HostConfig;
+        $this->hostConfig = $container_info->HostConfig ?? null;
 
         if (isset($container_info->Names[0]))
             $this->name = $container_info->Names[0];
