@@ -20,6 +20,13 @@ final class DockerContainer {
     public \stdClass|string $state;
 
     /**
+     * @var \stdClass
+     */
+    public \stdClass $config;
+
+    public \stdClass $hostConfig;
+
+    /**
      * @param \stdClass $container_info
      */
     public function __construct(\stdClass $container_info)
@@ -27,6 +34,10 @@ final class DockerContainer {
         $this->id = $container_info->Id;
 
         $this->state = $container_info->State;
+
+        $this->config = $container_info->Config;
+
+        $this->hostConfig = $container_info->HostConfig;
 
         if (isset($container_info->Names[0]))
             $this->name = $container_info->Names[0];
