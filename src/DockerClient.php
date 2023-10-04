@@ -454,13 +454,13 @@ final class DockerClient {
 
         try {
 
-            $container = $this->dockerApiRequest(HttpMethodEnum::GET, '/images/json?filters={"reference":["' . $name . ':' . $tag .'"]}', allowed_codes: array(200));
+            $image = $this->dockerApiRequest(HttpMethodEnum::GET, '/images/json?filters={"reference":["' . $name . ':' . $tag .'"]}', allowed_codes: array(200));
 
-            if (empty($container)) {
+            if (!$image) {
                 throw new DockerException("Image not found!", DockerErrorCodeEnum::WARNING);
             }
 
-            return new DockerImage($container);
+            return new DockerImage(((array)$image)[0]);
 
         } catch (DockerException $e) {
 
