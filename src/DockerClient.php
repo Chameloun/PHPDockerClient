@@ -172,7 +172,8 @@ final class DockerClient {
 
         }
 
-        throw new DockerException("Request to Docker API failed!", DockerErrorCodeEnum::ERROR);
+        //throw new DockerException("Request to Docker API failed!", DockerErrorCodeEnum::ERROR);
+        throw new DockerException(curl_error($curl), DockerErrorCodeEnum::ERROR);
 
     }
 

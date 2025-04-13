@@ -46,11 +46,6 @@ class DockerImage
     private ?int $SharedSize;
 
     /**
-     * @var ?int
-     */
-    private ?int $VirtualSize;
-
-    /**
      * @var ?stdClass
      */
     private ?stdClass $Labels;
@@ -79,7 +74,7 @@ class DockerImage
 
         $this->SharedSize = $image_info->SharedSize;
 
-        $this->VirtualSize = $image_info->VirtualSize;
+        //$this->VirtualSize = $image_info->VirtualSize;
 
         $this->Labels = $image_info->Labels;
 
