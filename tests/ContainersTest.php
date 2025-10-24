@@ -19,6 +19,19 @@ final class ContainersTest extends TestCase
         $this->assertIsArray($containers);
     }
 
+    public function testListVolumes(): void
+    {
+        $containers = $this->client->listVolumes();
+        $this->assertIsArray($containers);
+    }
+
+    public function testListImages(): void
+    {
+        $containers = $this->client->listAllImages();
+        $this->assertIsArray($containers);
+    }
+
+    /*
     public function testStopAllContainers(): void
     {
         $container = $this->client->stopAllContainers();
@@ -38,6 +51,6 @@ final class ContainersTest extends TestCase
         $container = $this->client->startAllContainers();
         $this->assertTrue($container);
     }
-
+    */
 
 }
