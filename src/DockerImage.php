@@ -58,28 +58,18 @@ class DockerImage
     /**
      * @param stdClass $image_info
      */
-    public function __construct(stdClass $image_info) {
-
+    public function __construct(stdClass $image_info)
+    {
         $this->Id = $image_info->Id;
-
         $this->RepoTags = $image_info->RepoTags;
-
         $this->ParentId = $image_info->ParentId;
-
         $this->RepoDigests = $image_info->RepoDigests;
-
         $this->Created = $image_info->Created;
-
         $this->Size = $image_info->Size;
-
         $this->SharedSize = $image_info->SharedSize;
-
-        //$this->VirtualSize = $image_info->VirtualSize;
-
+        @$this->VirtualSize = $image_info->VirtualSize;
         $this->Labels = $image_info->Labels;
-
         $this->Containers = $image_info->Containers;
-
     }
 
     /**

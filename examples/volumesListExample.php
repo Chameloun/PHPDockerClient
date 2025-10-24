@@ -10,4 +10,4 @@ $client = new DockerClient();
 
 //$client->setUnixSocket("/Users/matejsoukup/.docker/run/docker.sock");
 
-print_r($client->listAllImages());
+print_r($client->listVolumes());
