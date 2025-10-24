@@ -183,16 +183,17 @@ final class DockerClient {
      */
     private function formatContainerLogs(string $logs): string {
 
-        $logs = preg_replace('/[\x00\x02\x1c\x01\x1e]/', '', $logs);
-
-        $lines = explode("\n", $logs);
-
-        for ($i = 1, $iMax = count($lines); $i < $iMax; $i++) {
-            $lines[$i] = substr($lines[$i], 1);
+        $i = 0;
+        $output = '';
+        while ($i < strlen($logs)) {
+            $streamType = ord($logs[$i]);
+            $i += 4;
+            $length = unpack('N', substr($logs, $i, 4))[1];
+            $i += 4;
+            $output .= substr($logs, $i, $length);
+            $i += $length;
         }
-        unset($line);
-
-        return implode("\n", $lines);
+        return $output;
 
     }
     public function listContainers(bool $all = false, ?string $filter = null) : array {
