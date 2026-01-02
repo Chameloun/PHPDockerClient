@@ -16,16 +16,27 @@ trait DockerContainerTrait {
 
         $i = 0;
         $output = '';
-        while ($i < strlen($logs)) {
-            $streamType = ord($logs[$i]);
-            $i += 4;
-            $length = unpack('N', substr($logs, $i, 4))[1];
-            $i += 4;
-            $output .= substr($logs, $i, $length);
-            $i += $length;
-        }
-        return $output;
+        $len = strlen($logs);
 
+        while ($i < $len) {
+
+            if ($i + 8 > $len) {
+                break;
+            }
+
+            $header = substr($logs, $i, 8);
+            $size = unpack('N', substr($header, 4, 4))[1];
+
+            $i += 8;
+
+            if ($i + $size <= $len) {
+                $output .= substr($logs, $i, $size);
+            }
+
+            $i += $size;
+        }
+
+        return trim($output);
     }
     public function listContainers(bool $all = false, ?string $filter = null) : array {
 
