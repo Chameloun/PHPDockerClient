@@ -132,6 +132,13 @@ final class DockerClient {
 
         }
 
+        if ($method === HttpMethodEnum::PUT and $data !== "") {
+
+            $curl_config[CURLOPT_POSTFIELDS] = $data;
+            $curl_config[CURLOPT_HTTPHEADER] = array('Accept: application/json', 'Content-Type: application/x-tar');
+
+        }
+
         curl_setopt_array($curl, $curl_config);
         
         $response = curl_exec($curl);

@@ -285,5 +285,18 @@ trait DockerContainerTrait {
         return $this;
 
     }
+    public function containerArchive(string $data) {
+
+        try {
+
+            return ($this->dockerApiRequest(HttpMethodEnum::PUT, "/containers/" . ($id_name ?? $this->getWorkingContainer()) . "/archive?path=/tmp", data: $data, allowed_codes: array(200)));
+
+        } catch (DockerException $e) {
+
+            throw new DockerException($e->getMessage(), DockerErrorCodeEnum::from($e->getCode()));
+
+        }
+
+    }
 
 }

@@ -67,19 +67,7 @@ abstract class AbstractDockerContainerConfig {
         public ?DockerContainerHostConfig $HostConfig = null
 
 
-    ){
-
-        if (!preg_match("/\/[a-zA-Z0-9][a-zA-Z0-9_.-]+$/i", $this->Name)) {
-            $this->Name = "/" . $this->Name;
-        }
-
-        if (!preg_match("/\/[a-zA-Z0-9][a-zA-Z0-9_.-]+$/i", $this->Name)) {
-            
-            throw new \ErrorException("Container name is wrong!", 1, 1);
-
-        }
-
-    }
+    ){}
 
     /**
      * @return mixed
