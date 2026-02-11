@@ -130,7 +130,7 @@ final class DockerContainer {
     /**
      * @return \DateTime
      */
-    public function getFinishedTime(): \DateTime {
+    public function getFinishedAt(): \DateTime {
 
         return new \DateTime($this->state->FinishedAt);
 
@@ -141,7 +141,24 @@ final class DockerContainer {
      */
     public function getRunDuration(): \DateInterval {
 
-        return date_diff($this->getStartedAt(), $this->getFinishedTime());
+        return date_diff($this->getStartedAt(), $this->getFinishedAt());
+
+    }
+
+    /**
+     * @return float
+     */
+    public function getRunDurationSeconds(): float
+    {
+
+        $start = $this->getStartedAt();
+        $end = $this->getFinishedAt();
+
+        if (!$start || !$end) return 0.0;
+
+        $duration = (float)$end->format('U.u') - (float)$start->format('U.u');
+
+        return round($duration, 4);
 
     }
 
