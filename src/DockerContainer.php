@@ -15,12 +15,17 @@ final class DockerContainer {
     public string $name;
 
     /**
-     * @var \stdClass
+     * @var \stdClass|string
      */
     public \stdClass|string $state;
 
     /**
-     * @var \stdClass
+     * @var string|null
+     */
+    public ?string $image = null;
+
+    /**
+     * @var \stdClass|null
      */
     public \stdClass|null $config;
 
@@ -34,6 +39,8 @@ final class DockerContainer {
         $this->id = $container_info->Id;
 
         $this->state = $container_info->State;
+
+        $this->image = $container_info->Image ?? ($container_info->Config->Image ?? null);
 
         $this->config = $container_info->Config ?? null;
 
